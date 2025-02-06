@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alata", serif;
+    font-weight: 400;
+    font-style: normal;
+    outline: none;
+}
+
+
+body {
+    background: white;
+}
+
+/* Cabeçalho */
+header {
+    padding: 30px 0;
+}
+
+#logo {
+    height: 50px;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 21px;
+}
+
+.ul-cabecalho a {
+    color: #7c7a7a;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.ul-cabecalho a:hover {
+    color: #1c0937;
+}
+
+/* Containers */
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #1c0937;
+}
+
+/* Seção principal */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin: 40px auto;
+    max-width: 1280px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#img-site {
+    height: 500px;
+    
+}
+
+/* Bloco de entrada de tarefas */
+.container-3 {
+    background-color: #d1d1d1;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto 0;
+}
+
+.input-task {
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+    max-width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.button-add {
+    border: none;
+    border-radius: 4px;
+    width: 90px;
+    height: 40px;
+    background-color: #5dc02c;
+    float: right;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 700;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.button-add:hover {
+    background-color: #60a13f;
+}
+
+/* Botões de ação */
+.button-done, .button-edit, .button-remove {
+    transition: transform 0.1s ease-in-out;
+}
+
+.button-done:hover,
+.button-edit:hover,
+.button-remove:hover {
+    transform: scale(1.2);
+}
+
+/* Listagem de tarefas */
+.list-task {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #ffffff;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.task:hover button {
+    opacity: 1;
+}
+
+.done {
+    background-color: rgb(102, 0, 255);
+    text-decoration: line-through;
+}
+
+/* Ícones de ação */
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    height: 25px;
+}
+
+
+/* Responsividade:*/
+
+@media screen and (max-width: 480px) {
+    header .container {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ul-cabecalho {
+        text-align: center; 
+        margin-top: 20px;
+    }
+
+    .ul-cabecalho li {
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        height: 40px; 
+    }
+
+    .input-task, .button-add {
+        width: 100%; 
+    }
+
+    .task {
+        flex-direction: column; 
+    }
+}
